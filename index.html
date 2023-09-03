@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosIA.css">
+    <title>Categorías de Plantas</title>
+    <style>
+        /* Estilos para ocultar los botones de radio predeterminados */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Estilos para crear botones de radio personalizados */
+        input[type="radio"] + label {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* Estilos para cambiar el aspecto de los botones de radio cuando están seleccionados */
+        input[type="radio"]:checked + label {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Estilos para ocultar las secciones por defecto */
+        .plantas-categoria {
+            display: none;
+        }
+
+        /* Mostrar la sección de "Plantas de Interior" cuando se selecciona el radio correspondiente */
+        #interior:checked ~ #plantas-interior {
+            display: block;
+        }
+
+        /* Mostrar la sección de "Plantas de Exterior" cuando se selecciona el radio correspondiente */
+        #exterior:checked ~ #plantas-exterior {
+            display: block;
+        }
+
+        /* Estilos para mostrar imágenes de plantas horizontalmente */
+        .plantas-categoria .planta {
+            display: flex;
+        }
+
+        .plantas-categoria .planta img {
+            margin-right: 10px; /* Espacio entre las imágenes */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Jardín</h1>
+        <nav>
+            <ul>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#quien-somos">Quién soy</a></li>
+                <li><a href="#plantas">Plantas</a></li>
+                <li><a href= "#proyecto">Proyecto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="proyecto">
+        <h2>ACTIVIDAD 1- Proyecto de Software</h2>
+        <p>Este proyecto es una práctica de la asignatura de Implementación de Aplicaciones Web.</p>
+        <div > 
+            <img src="imagenes/consigna.png" alt="Planta de Interior 2">
+            <img src="imagenes/consigna2.png" alt="Planta de Interior 2">
+        </div>
+        <a href="https://www.youtube.com/watch?v=2r5yZu5uhio&list=RD2r5yZu5uhio&start_radio=1">Enlace al video</a>
+
+    </section>
+
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="quien-somos">
+        <h2>Quién soy</h2>
+        <p>¡Hola! Soy Iñaki y aquí te muestro algunas de las plantas que cultivo en mi jardín.</p>
+    </section>
+    <section id="plantas">
+
+        <h2>Categorías de Plantas</h2>
+        <input type="radio" name="categoria" id="interior" checked>
+        <label for="interior">Plantas de Interior</label>
+        <input type="radio" name="categoria" id="exterior">
+        <label for="exterior">Plantas de Exterior</label>
+
+        <div id="plantas-interior" class="plantas-categoria">
+            <h3>Plantas de Interior</h3>
+            <div class="planta">
+                <h4>Planta de Interior 1</h4>
+                <img src="imagenes/planta_interior_1.jpg" alt="Planta de Interior 1">
+                <p><a href="info/planta_interior_1.pdf" target="_blank">Información PDF</a></p>
+            </div>
+            <div class="planta">
+                <h4>Planta de Interior 2</h4>
+                <img src="imagenes/planta_interior_2.jpg" alt="Planta de Interior 2">
+                <p><a href="info/planta_interior_2.pdf" target="_blank">Información PDF</a></p>
+            </div>
+            <div class="planta">
+                <h4>Planta de Interior 3</h4>
+                <img src="imagenes/planta_interior_3.jpg" alt="Planta de Interior 3">
+                <p><a href="info/planta_interior_3.pdf" target="_blank">Información PDF</a></p>
+            </div>
+        </div>
+    
+        <!-- Plantas de Exterior -->
+        <div id="plantas-exterior" class="plantas-categoria">
+            <h3>Plantas de Exterior</h3>
+            <div class="planta">
+                <h4>Planta de Exterior 1</h4>
+                <img src="imagenes/planta_exterior_1.jpg" alt="Planta de Interior 1">
+                <p><a href="info/planta_exterior_1.pdf" target="_blank">Información PDF</a></p>
+                <h4>Planta de Exterior 2</h4>
+                <img src="imagenes/planta_exterior_2.jpg" alt="Planta de Interior 2">
+                <p><a href="info/planta_exterior_2.pdf" target="_blank">Información PDF</a></p>
+                <h4>Planta de Exterior 3</h4>
+                <img src="imagenes/planta_exterior_3.jpg" alt="Planta de Interior 3">
+                <p><a href="info/planta_exterior_3.pdf" target="_blank">Información PDF</a></p>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
+
+
+
