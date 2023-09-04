@@ -93,6 +93,7 @@ section {
     width: 200px; /* Ancho fijo para todas las plantas */
     height: 200px; /* Altura fija para todas las plantas */
     text-align: center; /* Centra el contenido dentro de cada planta */
+    border: 45px;
 }
 
 /* Estilos para las imágenes */
